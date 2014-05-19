@@ -15,4 +15,8 @@ public class PlayerController : MonoBehaviour
 		rigidbody.AddForce (movement * speed * Time.deltaTime);
 	}
 
+	function OnTriggerEnter (other : Collider) {
+		Destroy(other.gameObject);
+	}
+
 }
